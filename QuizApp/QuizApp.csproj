@@ -68,16 +68,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\datepicker.js" />
+    <Content Include="CSS\bootstrap-theme.css" />
+    <Content Include="CSS\bootstrap-theme.min.css" />
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\jquery-ui.css" />
+    <Content Include="CSS\MenuStyles.css" />
+    <Content Include="CSS\Style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\Calender\backstripes.gif" />
+    <Content Include="Images\Calender\bg_header.jpg" />
+    <Content Include="Images\Calender\bullet1.gif" />
+    <Content Include="Images\Calender\bullet2.gif" />
+    <Content Include="Images\Calender\cal.gif" />
+    <Content Include="Images\Calender\Calender.gif" />
+    <Content Include="Images\Calender\gradient.gif" />
+    <Content Include="Images\CloseBtn.jpg" />
+    <Content Include="Images\grad_dark.png" />
+    <Content Include="Images\Logo.jpg" />
+    <Content Include="Images\nologo.png" />
+    <Content Include="Images\Search.png" />
+    <Content Include="Images\top.jpg" />
+    <Content Include="Images\top_banner.jpg" />
+    <Content Include="Index.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WUCFooter.ascx" />
+    <Content Include="WUCHeader.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WUCFooter.ascx.cs">
+      <DependentUpon>WUCFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUCFooter.ascx.designer.cs">
+      <DependentUpon>WUCFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WUCHeader.ascx.cs">
+      <DependentUpon>WUCHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WUCHeader.ascx.designer.cs">
+      <DependentUpon>WUCHeader.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\bootstrap-theme.css.map" />
+    <Content Include="CSS\bootstrap-theme.min.css.map" />
+    <Content Include="CSS\bootstrap.css.map" />
+    <Content Include="CSS\bootstrap.min.css.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -88,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\SchoolLogos\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
