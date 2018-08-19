@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Index.aspx" />
     <Content Include="Content\datepicker.css" />
     <Content Include="Content\datepicker.js" />
     <Content Include="CSS\bootstrap-theme.css" />
@@ -90,24 +91,34 @@
     <Content Include="Images\grad_dark.png" />
     <Content Include="Images\Logo.jpg" />
     <Content Include="Images\nologo.png" />
+    <Content Include="Images\bckgrd1.jpg" />
     <Content Include="Images\Search.png" />
     <Content Include="Images\top.jpg" />
     <Content Include="Images\top_banner.jpg" />
-    <Content Include="Index.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="TestPage.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WUCFooter.ascx" />
     <Content Include="WUCHeader.ascx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WUCFooter.ascx.cs">
@@ -131,6 +142,7 @@
     <Content Include="CSS\bootstrap.css.map" />
     <Content Include="CSS\bootstrap.min.css.map" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

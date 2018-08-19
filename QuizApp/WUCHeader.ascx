@@ -6,7 +6,7 @@
 </div>
     </ProgressTemplate>
     </asp:UpdateProgress>
-<table border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; text-align: left;" width="1004px">
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; text-align: left;" width="1200px">
 <tr>
     <td>
 <table border="0" cellpadding="0" cellspacing="0" style="text-align: center;" width="100%">
@@ -23,7 +23,7 @@
     </td>
   </tr>
   <tr>
-    <td class="header">Pyschological Test</td>
+    <td class="header" style="color:chocolate" >Pyschometric Test</td>
   </tr>
 </table>
     </td>
@@ -31,29 +31,5 @@
   </tr>
 </table>
     </td>
-  </tr>
-  <tr>
-    <td align="center" nowrap>
-<div id='cssmenu'>
-<ul>
-    <li><a href='Default.aspx'><span>Home</span></a></li>
-<%if (!IsUser) {%>
-             <li><a href='SportsInfo.aspx'><span>Basic Information.</span></a></li>         
-      
-<%} %>    
-    <li class='has-sub'><a href='#'><span>Reports</span></a>        
-    </li>
-<%if (!IsUser) {%>
-   
-	<li class='has-sub'><a href="#"><span>Settings</span></a>
-        <ul>
-            <li><a href="ChangePassword.aspx" target="_self"><span> Change Password </span></a></li>
-        </ul>
-	</li>
-<%} %>
-    <li class='last'><asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click" CausesValidation="False" OnClientClick="form1.target='_self'">Logout</asp:LinkButton></li>
-</ul>
-</div>
-    </td>
-  </tr>
+  </tr>  
 </table>
