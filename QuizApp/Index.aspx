@@ -143,7 +143,7 @@
                                 </td>
                             </tr>                           
                             <tr>
-                                <td style="text-align:center">
+                                <td style="text-align:center; font-size:medium">
                                     <asp:CheckBox ID="CBAgree" runat="server" Text="I Agree" OnCheckedChanged="CBAgree_CheckedChanged"/> &nbsp
                                     <asp:LinkButton ID="LBContinue" runat="server" OnClick="LBContinue_Click">Continue to Questionnaire</asp:LinkButton>
                                 </td>
