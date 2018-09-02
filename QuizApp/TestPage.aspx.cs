@@ -29,6 +29,7 @@ namespace QuizApp
             {
                 LblMsg.Visible = true;
                 LblMsg.Text = "Question marked with * sign is not answered";
+                LblMsg.Focus();
             }
             else
             {
@@ -3322,6 +3323,7 @@ namespace QuizApp
                 {
                     LblMsg.Visible = true;
                     LblMsg.Text = ex.Message.ToString();
+                    
                 }
                 finally
                 {

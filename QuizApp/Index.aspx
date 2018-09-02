@@ -49,7 +49,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ScriptManager ID="ScriptManager1" runat="server"/>
+            <asp:ScriptManager ID="ScriptManager1" EnablePartialRendering="true" runat="server"/>
+                            
             <table border="0" cellpadding="5" cellspacing="0" style=" text-align: left;" width="100%;">
                 <tr>
                     <td>
@@ -66,9 +67,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" />
                                     <marquee style="color:maroon; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:small ; font-style:oblique" ><strong>Greeting from Asha Wellness!</strong></marquee>
                                     <asp:Panel ID="PanelAdd" runat="server">
+                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                            <ContentTemplate>
                                         <table border="0" cellpadding="2" cellspacing="2" style="text-align: left; line-height: 35px; width: 100%; background-color:beige; font-size:medium">
                                             <tr>
                                                 <td style="text-align:center; color:red" colspan="4">
@@ -87,7 +89,7 @@
                                                     <asp:RequiredFieldValidator ID="RFVEmpID" runat="server" ControlToValidate="TBEmpID" ErrorMessage="*" Font-Size="10pt" ForeColor="Red"></asp:RequiredFieldValidator>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr>                                               
                                                 <td>Date of Birth *</td>
                                                 <td>
                                                     <asp:TextBox ID="TBDOB" runat="server" AutoPostBack="true" CssClass="w8em format-d-m-y highlight-days-67 range-high-today" MaxLength="10" Width="100px" OnTextChanged="TBDOB_TextChanged" />
@@ -111,7 +113,8 @@
                                                 </td>
                                                 <td style="width: 130px;">Location</td>
                                                 <td style="width: 280px;">                                                    
-                                                    <asp:DropDownList ID="DDLLocation" runat="server" Width="200px" Height="30px"    Font-Size="Medium" >                                                        
+                                                    <asp:DropDownList ID="DDLLocation" runat="server" Width="220px" Height="30px"    Font-Size="Medium" >                                                        
+                                                        <asp:ListItem Text="Makino Training Centre,Bengaluru" Value="Makino Training Centre,Bengaluru" />
                                                         <asp:ListItem Text="Bengaluru" Value="Bengaluru" />
                                                          <asp:ListItem Text="Chennai" Value="Chennai" />
                                                          <asp:ListItem Text="Pune" Value="Pune" />
@@ -122,6 +125,8 @@
                                                 </td>
                                             </tr>
                                         </table>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
                                     </asp:Panel>
                                 </td>
                             </tr>
@@ -151,7 +156,8 @@
                         <uc1:WUCFooter ID="WUCFooter1" runat="server" />
                     </td>
                 </tr>
-            </table>
+            </table>                
+           
         </div>
     </form>
 </body>

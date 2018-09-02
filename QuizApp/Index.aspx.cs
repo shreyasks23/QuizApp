@@ -19,20 +19,21 @@ namespace QuizApp
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!RBMale.Checked)
-                Gender = "Female";
+                  Gender = "Female";
 
-            if (TBName.Text.Trim() != "")
-            {
-                Session["UserName"] = TBName.Text.Trim();
-                Session["EmployeeID"] = TBEmpID.Text;
-                Session["DOB"] = TBDOB.Text;
-                Session["MailID"] = TBEMail.Text;
-                Session["Gender"] = Gender;
-            }
-            else
-            {
-                Session["UserName"] = "user";
-            }
+                if (TBName.Text.Trim() != "")
+                {
+                    Session["UserName"] = TBName.Text.Trim();
+                    Session["EmployeeID"] = TBEmpID.Text;
+                    Session["DOB"] = TBDOB.Text;
+                    Session["MailID"] = TBEMail.Text;
+                    Session["Gender"] = Gender;
+                }
+                else
+                {
+                    Session["UserName"] = "user";
+                }
+         
 
         }
 
