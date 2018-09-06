@@ -88,7 +88,7 @@ namespace QuizApp
 
                         SCon.Open();
 
-                        SCmd = new SqlCommand("SELECT * FROM PsychometricResults WHERE EmployeeID='" + TBEmpID.Text.ToString().Trim() + "' AND (Empathy is NOT NULL or Empathy = '') AND RecordStatus<2", SCon);
+                        SCmd = new SqlCommand("SELECT * FROM PsychometricResults WHERE EmployeeID='" + TBEmpID.Text.Trim() + "' AND (Empathy is NOT NULL or Empathy = '') AND RecordStatus<2", SCon);
                         ST = SCon.BeginTransaction(IsolationLevel.ReadCommitted);
                         SCmd.CommandType = CommandType.Text;
                         SCmd.Transaction = ST;

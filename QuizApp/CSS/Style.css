@@ -130,14 +130,13 @@ background-color :#336699;
 box-shadow: 0 0 1px rgba(0,0,0, .75);
 }
 
-.loginHeader
-{
-    background-color: #3A3A3A;
+.loginHeader {
+    background-color: #c9c184;
     background: url('../Images/grad_dark.png') repeat;
-	font-family: Verdana;
-	font-size: 10pt;
-	font-weight: bold;
-	color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #FFFFFF;
     height: 35px;
     text-align: center;
 }
@@ -271,5 +270,10 @@ box-shadow: 0 0 1px rgba(0,0,0, .75);
     text-align: center;
 	text-decoration: none;
 }
+
+.fixed-bottom {
+    display: table-footer-group;
+}
+
 
     

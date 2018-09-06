@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\GenerateReport.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Content\datepicker.css" />
     <Content Include="Content\datepicker.js" />
@@ -99,10 +100,18 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Login.aspx" />
     <Content Include="WUCFooter.ascx" />
     <Content Include="WUCHeader.ascx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\GenerateReport.aspx.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GenerateReport.aspx.designer.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +130,13 @@
       <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WUCFooter.ascx.cs">
       <DependentUpon>WUCFooter.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
