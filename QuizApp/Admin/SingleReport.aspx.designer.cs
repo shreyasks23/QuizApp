@@ -10,7 +10,7 @@
 namespace QuizApp.Admin {
     
     
-    public partial class GenerateReport {
+    public partial class SingleReport {
         
         /// <summary>
         /// form1 control.
@@ -31,15 +31,6 @@ namespace QuizApp.Admin {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// WUCHeader1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::QuizApp.WUCHeader WUCHeader1;
-        
-        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -49,120 +40,102 @@ namespace QuizApp.Admin {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// PanelSearch control.
+        /// LblErr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelSearch;
+        protected global::System.Web.UI.WebControls.Label LblErr;
         
         /// <summary>
-        /// LblMsg control.
+        /// divReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMsg;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divReport;
         
         /// <summary>
-        /// DDLLocation control.
+        /// LblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLLocation;
+        protected global::System.Web.UI.WebControls.Label LblName;
         
         /// <summary>
-        /// RFVLocationName control.
+        /// LblEmployeeID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVLocationName;
+        protected global::System.Web.UI.WebControls.Label LblEmployeeID;
         
         /// <summary>
-        /// DDLDates control.
+        /// LblLocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLDates;
+        protected global::System.Web.UI.WebControls.Label LblLocation;
         
         /// <summary>
-        /// TBEmployeeName control.
+        /// LblCompanyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBEmployeeName;
+        protected global::System.Web.UI.WebControls.Label LblCompanyName;
         
         /// <summary>
-        /// TBEmployeeID control.
+        /// LblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBEmployeeID;
+        protected global::System.Web.UI.WebControls.Label LblEmail;
         
         /// <summary>
-        /// BtnSubmit control.
+        /// LblAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSubmit;
+        protected global::System.Web.UI.WebControls.Label LblAge;
         
         /// <summary>
-        /// BtnClear control.
+        /// LblGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnClear;
+        protected global::System.Web.UI.WebControls.Label LblGender;
         
         /// <summary>
-        /// BtnPDFReport control.
+        /// LblDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnPDFReport;
+        protected global::System.Web.UI.WebControls.Label LblDOB;
         
         /// <summary>
-        /// LblCount control.
+        /// Chart1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCount;
-        
-        /// <summary>
-        /// GVStudentProfile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVStudentProfile;
-        
-        /// <summary>
-        /// WUCFooter1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::QuizApp.WUCFooter WUCFooter1;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart1;
     }
 }

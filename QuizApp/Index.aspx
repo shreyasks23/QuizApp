@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BasicInfo.aspx.cs" Inherits="QuizApp.BasicInfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="QuizApp.BasicInfo" %>
 
 <%@ Register Src="~/WUCHeader.ascx" TagName="WUCHeader" TagPrefix="uc1" %>
 <%@ Register Src="~/WUCFooter.ascx" TagName="WUCFooter" TagPrefix="uc1" %>

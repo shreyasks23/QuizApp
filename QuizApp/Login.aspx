@@ -59,7 +59,7 @@
                                                     <td style="line-height: 50px;">
                                                         <asp:Button ID="BtnLogin" runat="server" Text=" Login " OnClick="BtnLogin_Click" Width="80px" />
                                                         &nbsp; &nbsp; &nbsp; 
-        <asp:Button ID="BtnCancel" runat="server" Text="Cancel"  CausesValidation="false" /></td>
+        <asp:Button ID="BtnCancel" runat="server" Text="Cancel"  CausesValidation="false" OnClick="BtnCancel_Click" /></td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="4" style="line-height: 30px;">&nbsp;</td>

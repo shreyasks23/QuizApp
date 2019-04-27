@@ -8,8 +8,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Pyschometric Test</title>
-    <link href="CSS/MenuStyles.css" rel="stylesheet" type="text/css" />
-    <link href="CSS/Style.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/MenuStyles.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/jquery-ui.css" />    
    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>--%>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

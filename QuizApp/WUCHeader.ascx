@@ -18,16 +18,18 @@
 <table border="0" cellpadding="3" cellspacing="0" style="text-align: left; width: 100%">
   <tr>
     <td><asp:Label ID="LblUserName" runat="server" CssClass="userName" /></td>
+      <td align="Right"><asp:LinkButton ID="LogoutLink" runat="server" CssClass="logoutLink" OnClick="LogoutLink_Click">Logout</asp:LinkButton></td>
   </tr>
 </table>
     </td>
+       
   </tr>
   <tr>
     <td class="header" style="color:chocolate" >Pyschometric Test</td>
   </tr>
 </table>
     </td>
-    <td style="text-align: center; width: 150px;"><img alt="ASHA WELLNESS" src="Images/Logo.jpg" style="vertical-align: middle;" /></td>
+    <td style="text-align: center; width: 150px;"><img alt="ASHA WELLNESS" src="../Images/Logo.jpg" style="vertical-align: middle;" /></td>
   </tr>
 </table>
     </td>

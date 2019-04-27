@@ -1,0 +1,71 @@
+ if (CBAgree.Checked)
+                {                   
+                        try
+                    {
+                        SqlConnection SCon = new SqlConnection(CS);
+                        SqlDataAdapter SDA;
+                        SqlCommand SCmd;
+                        SqlTransaction ST;
+                        DataTable DT = new DataTable();
+                        DataRow DR;
+
+                        SCon.Open();
+
+                        SCmd = new SqlCommand("SELECT * FROM PsychometricResults WHERE EmployeeID='" + TBEmpID.Text.Trim() + "' AND (Empathy is NOT NULL or Empathy = '') AND RecordStatus<2", SCon);
+                        ST = SCon.BeginTransaction(IsolationLevel.ReadCommitted);
+                        SCmd.CommandType = CommandType.Text;
+                        SCmd.Transaction = ST;
+                        SCmd.CommandTimeout = 0;
+
+                        using (SDA = new SqlDataAdapter(SCmd))
+                        {
+                            new SqlCommandBuilder(SDA);
+                            SDA.Fill(DT);
+                            if (DT.Rows.Count > 0)
+                            {
+                                ScriptManager.RegisterClientScriptBlock(Page, this.GetType(), "alert", "<script>alert('You have already submitted your answers')</script>", false);
+                                ClearCtrls();
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    DR = DT.NewRow();
+                                    DR["Name"] = Session["UserName"];
+                                    DR["EmployeeID"] = Session["EmployeeID"];
+                                    DR["DOB"] = Session["DOB"];
+                                    DR["Age"] = getAge(Convert.ToDateTime(TBDOB.Text, culture));
+                                    DR["Email"] = Session["MailID"];
+                                    DR["Gender"] = Gender;
+                                    DR["Location"] = DDLLocation.SelectedValue;
+                                    DR["CompanyName"] = GetCompanyName();
+                                    DR["CreatedOn"] = DateTime.Now;
+                                    DR["RecordStatus"] = 1;
+
+                                    DT.Rows.Add(DR);
+                                    SDA.Update(DT);
+                                    ST.Commit();
+                                    ClearCtrls();
+
+                                    Response.Redirect("TestPage.aspx");
+
+                                }
+                                catch (Exception Ex)
+                                {
+                                    ST.Rollback();
+                                    LblMsg.Visible = true;
+                                    LblMsg.Text = Ex.Message.ToString();
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        LblMsg.Visible = true;
+                        LblMsg.Text = ex.Message.ToString();
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(Page, this.GetType(), "alert", "<script>alert('Please agree to the instructions by clicking in the box')</script>", false);
+                }

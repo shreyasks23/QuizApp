@@ -46,7 +46,7 @@ namespace QuizApp
                    1, // Ticket version
                    UserName, // Username associated with ticket
                    DateTime.Now, // Date/time issued
-                   DateTime.Now.AddMinutes(30), // Date/time to expire
+                   DateTime.Now.AddMinutes(20), // Date/time to expire
                    true, // "true" for a persistent user cookie
                    reader.GetString(0), // User-data, in this case the roles
                    FormsAuthentication.FormsCookiePath);// Path cookie valid for
@@ -56,7 +56,7 @@ namespace QuizApp
                 // Encrypt the cookie using the machine key for secure transport
                 string hash = FormsAuthentication.Encrypt(ticket);
                 HttpCookie cookie = new HttpCookie(
-                   FormsAuthentication.FormsCookieName, // Name of auth cookie
+                    FormsAuthentication.FormsCookieName, // Name of auth cookie
                    hash); // Hashed ticket
 
                 // Set the cookie's expiration time to the tickets expiration time
@@ -68,7 +68,7 @@ namespace QuizApp
                 // Redirect to requested URL, or homepage if no previous page
                 // requested
                 string returnUrl = Request.QueryString["ReturnUrl"];
-                if (returnUrl == null) returnUrl = "/";
+                if (returnUrl == null) returnUrl = "/Admin/GenerateReport.aspx";
 
                 // Don't call FormsAuthentication.RedirectFromLoginPage since it
                 // could
@@ -89,6 +89,11 @@ namespace QuizApp
 
 
         }
+        protected void BtnCancel_Click(object sender, EventArgs e)
+        {
+            ClrCtrls();
+        }
+
 
 
         #region Private Methods
@@ -106,6 +111,16 @@ namespace QuizApp
             password = hashString.PadLeft(32, '0');
             return password;
         }
+
+        private void ClrCtrls()
+        {
+            LblMsg.Text = "";
+            LblMsg.Visible = false;
+            TBUserID.Text = "";
+            TBPassword.Text = "";
+        }
         #endregion
+
+        
     }
 }

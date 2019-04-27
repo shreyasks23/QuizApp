@@ -261,6 +261,25 @@ box-shadow: 0 0 1px rgba(0,0,0, .75);
 	text-decoration: none;
 }
 
+.logoutLink {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    line-height: normal;
+    font-weight: bold;
+    color: #f90202;
+    text-decoration: none;
+}
+
+    .logoutLink:hover {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        line-height: normal;
+        font-weight: bold;
+        color: #f90202;
+        text-decoration: none;
+    }
+
+
 .header
 {
 	font-family: Verdana;

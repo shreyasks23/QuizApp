@@ -16,17 +16,39 @@ namespace QuizApp
     {
         
         protected void Page_Load(object sender, EventArgs e)
-        {            
+        {
+            LblUserName.Text = Session["UserName"].ToString();            
 
-            LblUserName.Text = Session["UserName"].ToString();
+        }
 
+        protected void LogoutLink_Click(object sender, EventArgs e)
+        {
+            Logout();
+        }
+
+
+        #region Helper Methods
+        public bool IsLoggedIn
+        {
+            get
+            {
+                return (LoginDate != "" && LoginID != "");
+            }
+        }
+
+        public string LoginID
+        {
+            get
+            {
+                return HttpContext.Current.User.Identity.Name;
+            }
         }
 
         public string LoginDate
         {
             get
             {
-                return getCookieValue("logindate");
+                return getCookieValue("QuizForm");
             }
         }
 
@@ -79,7 +101,32 @@ namespace QuizApp
                 retVal = Ex.Message;
             }
             return retVal;
-        }  
-       
+        }
+
+        public void Logout()
+        {
+            if (IsLoggedIn)
+            {
+                Session.RemoveAll();
+
+                HttpCookie authCookie;
+                string strCookieName = FormsAuthentication.FormsCookieName;
+                authCookie = Context.Request.Cookies[strCookieName];
+                authCookie.Expires = DateTime.Now.AddDays(-1);
+                authCookie.Value = "";
+                FormsAuthentication.SignOut();
+
+                string[] CookieValue = Request.Cookies.AllKeys;
+                for (int i = 0; i < CookieValue.Length; i++)
+                {
+                    authCookie = new HttpCookie(CookieValue[i].ToString());
+                    authCookie.Expires = DateTime.Now.AddDays(-1);
+                    Response.Cookies.Add(authCookie);
+                }
+
+                Response.Redirect("~/Login.aspx");
+            }
+        }
+        #endregion
     }
 }
