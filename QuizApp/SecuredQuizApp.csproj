@@ -79,6 +79,10 @@
     <Content Include="Admin\ExportExcel.aspx" />
     <Content Include="Admin\GenerateReport.aspx" />
     <Content Include="Admin\SingleReport.aspx" />
+    <Content Include="App_Data\SecuredQuizApp.mdf" />
+    <Content Include="App_Data\SecuredQuizApp_log.ldf">
+      <DependentUpon>SecuredQuizApp.mdf</DependentUpon>
+    </Content>
     <Content Include="Images\MakinoLogo.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="Content\datepicker.css" />
@@ -206,7 +210,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Images\SchoolLogos\" />
     <Folder Include="Models\" />
   </ItemGroup>
